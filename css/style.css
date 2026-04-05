@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(2, 1, 43);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.weather-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  top: 100px;
+}
+.search-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  gap: 50px;
+  font-size: 24px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.search-box input {
+  height: 30px;
+  width: 550px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.search-box button {
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+.search-box button:hover {
+  background-color: #0056b3;
+}
+#city-input {
+  background: #262640;
+}
+/* wheather-information */
+.weather-result {
+  margin-left: 170px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+.gradue-wheather {
+  background: url(../assets/images/bg-today-large.svg);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+    background-position: center;
+      min-height: 300px; /* مهم جدًا */
+  width: 800px;
+  margin-right: 500px;
+}
+/* weather-details */
+.weather-details  {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  min-width: 800px;
+  margin-right: 500px;
+  /* align-items: center; */
+  gap: 50px;
+}
+.weather-details li{
+  background-color: #22223a;
+  height: 100px;
+  display: block;
+  text-decoration: none;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css style link -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather app</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img src="assets/images/logo.svg" alt="Weather Icon" class="weather-icon">
+            <div class="search-container">
+                <h1 class="app-title">How's the sky looking today?</h1>
+                <div class="search-box">
+                    <input type="text" id="city-input" placeholder="Search for a city...">
+                    <button id="search-btn">Search</button>
+                </div>
+            </div>
+            <div id="weather-result" class="weather-result">
+                <!-- Weather information will be displayed here -->
+                <div class="screen">
+                    <div class="gradue-wheather">
+                        <div class="city-info">
+                            <h2 class="city-name"></h2>
+                            <p class="temperature"></p> 
+                        </div>
+                        <h2 class="description"></h2>
+                    </div>
+                        <div class="weather-info">
+                            <ul class="weather-details">
+                                <li id="description"></li>
+                                <li id="humidity">Humidity: 60%</li>
+                                <li id="wind-speed">Wind Speed: 10 km/h</li>
+                                <li id="pressure">Pressure: 1013 hPa</li>
+                            </ul>
+                        </div>
+                    <div class="daily-forecast">
+                        <h2>Daily Forecast</h2>
+                        <div class="forecast-container">
+                            <!-- Daily forecast items will be added here -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="hours"></div>
+            </div>
+        </div>
+        </div>
+      
+      
+
+    </main>
+
+
+
+    <!-- js script link -->
+    <script src="js/script.js"></script>
+</body>
+</html>

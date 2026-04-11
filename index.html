@@ -13,20 +13,23 @@
             <img src="assets/images/logo.svg" alt="Weather Icon" class="weather-icon">
             <div class="search-container">
                 <h1 class="app-title">How's the sky looking today?</h1>
-                <div class="search-box">
+                <form class="search-box">
                     <input type="text" id="city-input" placeholder="Search for a city...">
-                    <button id="search-btn">Search</button>
-                </div>
+                    <input type="button" id="search-btn" class="button" value="Search">
+                </form>
             </div>
-            <div id="weather-result" class="weather-result">
+            <div class="no-result" id="no-result">
+                <h2 class="no-result-text">No search results found!</h2>
+            </div>
+            <div id="weather-result" class="weather-result hidden">
                 <!-- Weather information will be displayed here -->
                 <div class="screen">
                     <div class="gradue-wheather">
                         <div class="city-info">
-                            <h2 class="city-name"></h2>
+                            <h2  id="city-name"></h2>
                             <p class="temperature"></p> 
                         </div>
-                        <h2 class="description"></h2>
+                        <h2 id="weather-description"></h2>
                     </div>
                         <div class="weather-info">
                             <ul class="weather-details">
@@ -44,7 +47,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="hours"></div>
+                <div class="hours">
+                    <h3>Hourly Forecast</h3>
+                    <div class="hourly-forecast">
+                        <!-- Hourly forecast items will be added here -->
+                    </div>
+                    <ul class="hours-daily">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
         </div>

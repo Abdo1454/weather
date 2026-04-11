@@ -41,7 +41,7 @@ body {
   border-radius: 5px;
   padding: 0 10px;
 }
-.search-box button {
+.search-box .button {
   height: 30px;
   width: 100px;
   border: none;
@@ -50,7 +50,7 @@ body {
   color: white;
   cursor: pointer;
 }
-.search-box button:hover {
+.search-box .button:hover {
   background-color: #0056b3;
 }
 #city-input {
@@ -58,6 +58,11 @@ body {
 }
 /* wheather-information */
 .weather-result {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+.screen {
   margin-left: 170px;
   margin-top: 30px;
   display: flex;
@@ -71,22 +76,22 @@ body {
 
   background-size: contain;
   background-repeat: no-repeat;
-    background-position: center;
-      min-height: 300px; /* مهم جدًا */
+  background-position: center;
+  min-height: 300px; /* مهم جدًا */
   width: 800px;
-  margin-right: 500px;
+  /* margin-right: 500px; */
 }
 /* weather-details */
-.weather-details  {
+.weather-details {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   min-width: 800px;
-  margin-right: 500px;
+  /* margin-right: 500px; */
   /* align-items: center; */
   gap: 50px;
 }
-.weather-details li{
+.weather-details li {
   background-color: #22223a;
   height: 100px;
   display: block;
@@ -94,4 +99,42 @@ body {
   width: 150px;
   padding: 10px;
   border-radius: 5px;
+}
+/* daily-forecast */
+.daily-forecast {
+  margin-top: 20px;
+  margin-right: 80%;
+}
+/* hourly-forecast */
+.hours {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  padding-bottom: 85%;
+}
+.hours-daily li {
+  background-color: #22223a;
+  height: 43px;
+  display: block;
+  text-decoration: none;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+/* no-result */
+.no-result {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+.no-result-text {
+  font-size: 30px;
+}
+/* hidden */
+.hidden {
+  display: none;
+  overflow: hidden;
 }

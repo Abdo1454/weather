@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css style link -->
     <link rel="stylesheet" href="css/style.css">
+     <!-- link icon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon-32x32.png">
     <title>Weather app</title>
 </head>
 <body>
@@ -13,7 +15,7 @@
             <img src="assets/images/logo.svg" alt="Weather Icon" class="weather-icon">
             <div class="search-container">
                 <h1 class="app-title">How's the sky looking today?</h1>
-                <form class="search-box">
+                <form class="search-box" onsubmit="return false;">
                     <input type="text" id="city-input" placeholder="Search for a city...">
                     <input type="button" id="search-btn" class="button" value="Search">
                 </form>
@@ -21,22 +23,25 @@
             <div class="no-result" id="no-result">
                 <h2 class="no-result-text">No search results found!</h2>
             </div>
+            <div id="wrong-result" class="wrong-result hidden">
+                <h2 class="wrong-result-text">Something went wrong!</h2>
+            </div>
             <div id="weather-result" class="weather-result hidden">
                 <!-- Weather information will be displayed here -->
                 <div class="screen">
                     <div class="gradue-wheather">
                         <div class="city-info">
                             <h2  id="city-name"></h2>
-                            <p class="temperature"></p> 
+                            <p id="temperature"></p> 
                         </div>
-                        <h2 id="weather-description"></h2>
+                        <h2 class="weather-description"></h2>
                     </div>
                         <div class="weather-info">
                             <ul class="weather-details">
-                                <li id="description"></li>
-                                <li id="humidity">Humidity: 60%</li>
-                                <li id="wind-speed">Wind Speed: 10 km/h</li>
-                                <li id="pressure">Pressure: 1013 hPa</li>
+                                <li> Feels Like <span id="description" ></span></li>
+                                <li>Humidity : <span id="humidity"> </span></li>
+                                <li >Wind Speed: <span id="wind-speed" ></span> </li>
+                                <li >Pressure: <span id="pressure"></span> </li>
                             </ul>
                         </div>
                     <div class="daily-forecast">
@@ -52,15 +57,9 @@
                     <div class="hourly-forecast">
                         <!-- Hourly forecast items will be added here -->
                     </div>
-                    <ul class="hours-daily">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="hours-daily" id="hours-daily">
+                        <!-- Hourly forecast details will be added here -->
+                    
                     </ul>
                 </div>
             </div>
@@ -74,6 +73,6 @@
 
 
     <!-- js script link -->
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

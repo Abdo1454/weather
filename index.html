@@ -31,29 +31,46 @@
                 <div class="screen">
                     <div class="gradue-wheather">
                         <div class="city-info">
-                            <h2  id="city-name"></h2>
-                            <p id="temperature"></p> 
-                        </div>
-                        <h2 class="weather-description"></h2>
+                                <h2  id="city-name"></h2>
+                                <h2 id="data-country"></h2>
+                            </div>
+                            <div class="temperature-description">
+                                <h2 id="statue"></h2>
+                                <h2 id="temperature"></h2> 
+                            </div>
+                        <!-- <h2 class="weather-description"></h2> -->
                     </div>
                         <div class="weather-info">
                             <ul class="weather-details">
-                                <li> Feels Like <span id="description" ></span></li>
-                                <li>Humidity : <span id="humidity"> </span></li>
-                                <li >Wind Speed: <span id="wind-speed" ></span> </li>
-                                <li >Pressure: <span id="pressure"></span> </li>
+                                <li> Feels Like <br> <span id="feels-like" ></span></li>
+                                <li>Humidity <br> <span id="humidity"> </span></li>
+                                <li >Wind Speed <br> <span id="wind-speed" ></span> </li>
+                                <li >Pressure <br> <span id="pressure"></span> </li>
                             </ul>
                         </div>
                     <div class="daily-forecast">
                         <h2>Daily Forecast</h2>
                         <div class="forecast-container">
                             <!-- Daily forecast items will be added here -->
-
                         </div>
                     </div>
                 </div>
                 <div class="hours">
-                    <h3>Hourly Forecast</h3>
+                    <div class="hourly-forecast-header">
+                        <h3>Hourly Forecast</h3>
+                        <h3 >
+                            <select id="day-select">
+                                <option value="0">sunday</option>
+                                <option value="1">monday</option>
+                                <option value="2">tuesday</option>
+                                <option value="3">wednesday</option>
+                                <option value="4">thursday</option>
+                                <option value="5">friday</option>
+                                <option value="6">saturday</option>
+                            <!-- <span id="day"></span> -->
+                            </select>
+                        </h3>
+                    </div>
                     <div class="hourly-forecast">
                         <!-- Hourly forecast items will be added here -->
                     </div>
@@ -65,9 +82,6 @@
             </div>
         </div>
         </div>
-      
-      
-
     </main>
 
 

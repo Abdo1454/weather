@@ -61,6 +61,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 45px;
+  height: 800px;
 }
 .screen {
   margin-left: 170px;
@@ -81,18 +82,44 @@ body {
   min-height: 300px; /* مهم جدًا */
   width: 800px;
   /* margin-right: 500px; */
-}
-/* gradue-wheather */
-.gradue-wheather .city-info{
-display: flex;
+  display: flex;
 justify-content: space-around;
 align-items: center;
-margin-top: 150px;
+/* margin-top: 150px; */
 gap: 300px;
+}
+#city-name {
+  font-size: 27px;
+  /* text-align: center; */
 
 }
-.gradue-wheather .city-info h2 ,.gradue-wheather .city-info p {
+#data-country {
+  font-size: 10px;
+}
+
+
+.temperature-description{
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+.temperature-description #temperature {
   font-size: 40px;
+  /* padding-right: 5px; */
+}
+/* weather-icon  */
+.weather-icon11 {
+  width: 100%;
+  height: 150px;
+}
+/* .gradue-wheather temprure */
+.gradue-wheather p {
+  font-size: 40px;
+}
+.gradue-wheather .city-info h2 ,.gradue-wheather .city-info p {
+  font-size: 37px;
 }
 /* weather-details */
 .weather-details {
@@ -113,6 +140,11 @@ gap: 300px;
   padding: 10px;
   border-radius: 5px;
 }
+.weather-details li span {
+  display: block;
+  font-size: 26px;
+  color: #fff;
+}
 /* daily-forecast */
 /* .daily-forecast {
   margin-top: 20px;
@@ -130,11 +162,11 @@ gap: 300px;
   background-color: #22223a;
   height: 130px;
   text-decoration: none;
-  width: 12%;
+  width: 14%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   padding: 10px;
   border-radius: 5px;
 }
@@ -144,6 +176,10 @@ gap: 300px;
   justify-content: center;
 
 }
+.forecast-icon111 {
+  width: 40px;
+  height:40px;
+}
 /* hourly-forecast */
 .hours {
   display: flex;
@@ -151,18 +187,69 @@ gap: 300px;
   flex-direction: column;
   gap: 20px;
   color: #fff;
-  padding-bottom: 85%;
+  /* padding-bottom: 85%; */
+  background: rgb(38, 38, 65);
+  /* background-attachment: fixed; */
+  /* width: 40%; */
+  width: 300px;
+  margin-top: 40px;
+  height: 95%;
+  border-radius: 10px;
+}
+.hourly-forecast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 0 0 0; */
+}
+.hours-daily {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 500px;
+}
+
+/* شكل الـ scrollbar كله */
+.hours-daily::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* الخلفية */
+.hours-daily::-webkit-scrollbar-track {
+  background: #22223a;
+}
+
+/* الجزء المتحرك */
+.hours-daily::-webkit-scrollbar-thumb {
+  background: #1a7de7;
+  border-radius: 10px;
+}
+
+/* عند الـ hover */
+.hours-daily::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
 }
 .hours-daily li {
   background-color: #22223a;
   height: 43px;
   display: block;
   text-decoration: none;
-  width: 200px;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   margin: 10px 0;
+    display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+  
 }
+/* hour-item  */
+/* .hour-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 200px;
+} */
 /* no-result */
 .no-result {
   color: white;
@@ -185,4 +272,136 @@ gap: 300px;
 .hidden {
   display: none;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+
+  /* Reset بسيط للموبايل */
+  * {
+    font-size: 14px;
+  }
+
+  /* Search */
+  .search-container {
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .search-box .button {
+    width: 120px;
+  }
+
+  /* Main layout */
+  .weather-result {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .screen {
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+  }
+
+  /* Main weather card */
+  .gradue-wheather {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    background-size: cover;
+  }
+
+  /* City text */
+  #city-name {
+    font-size: 20px;
+  }
+
+  #data-country {
+    font-size: 12px;
+  }
+
+  /* Temperature section */
+  .temperature-description {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .temperature-description #temperature {
+    font-size: 28px;
+  }
+
+  .temperature-description .weather-icon11 {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+  }
+
+  /* Details cards */
+  .weather-details {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    min-width: unset;
+  }
+
+  .weather-details li {
+    width: 45%;
+    height: auto;
+  }
+
+  .weather-details li span {
+    font-size: 18px;
+  }
+
+  /* Forecast */
+  .forecast-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .forecast-container .forecast-item {
+    width: 45%;
+  }
+
+  .forecast-icon111 {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Hourly section */
+  .hours {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .hours-daily li {
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  /* Hide big spacing bugs */
+  .gradue-wheather {
+    margin: 0;
+  }
 }
